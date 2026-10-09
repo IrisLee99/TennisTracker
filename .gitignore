@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+node_modules/
+dist/
+.env
+.DS_Store
+# footage and model weights stay out of git
+data/
+*.mp4
+*.mov
+*.pt

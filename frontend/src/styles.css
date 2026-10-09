@@ -1,0 +1,62 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, sans-serif;
+  background: #10141a;
+  color: #e8edf2;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+h1 {
+  font-size: 1.4rem;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+button,
+select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #3a4553;
+  background: #1c2430;
+  color: inherit;
+  font: inherit;
+}
+button:disabled {
+  opacity: 0.5;
+}
+.hint {
+  color: #9fb0c3;
+}
+.error {
+  color: #ff6b81;
+}
+.stage {
+  position: relative;
+}
+.stage video {
+  display: block;
+  width: 100%;
+}
+/* The overlay never takes clicks, so the video controls stay usable. */
+.stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/* Click target for picking corners; stops short of the video control bar. */
+.stage .picker {
+  position: absolute;
+  inset: 0 0 48px 0;
+  cursor: crosshair;
+}
